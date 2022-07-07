@@ -29,5 +29,11 @@ namespace TextEditor
         public string text { get; set; }
         public string font { get; set; }
         public textProperties() {}
+
+        public String toString()
+        {
+            return title + text + font +
+                 formSize.ToString() + backColor.ToString() + fontColor.ToString();
+        }
     }
 }

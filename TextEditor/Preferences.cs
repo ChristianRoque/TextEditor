@@ -26,7 +26,7 @@ namespace TextEditor
             InitializeComponent();
             this.properties = properties;
             this.fontStyle.Text = properties.font;
-            this.fileTitle.Text = properties.title;
+            this.fileTitle.Text = properties.title.Split('.')[0];
             this.label3.BackColor = properties.backColor;
             this.label4.BackColor = properties.fontColor;
       

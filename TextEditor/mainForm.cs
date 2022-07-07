@@ -18,6 +18,7 @@ namespace TextEditor
     {
         string fileName;
         FileStream fs;
+        string initialStateProperties = "";
         textProperties textFormat = new textProperties();
 
         public textEditor()
@@ -57,22 +58,13 @@ namespace TextEditor
 
         void OpenFile(string fileName)
         {
-            
-            if (fileName.Substring(fileName.Length - 3) != "dat")
-            {
-                this.fileName = fileName;
-                using (StreamReader reader = new StreamReader(fileName))
-                {
-                    this.textBox1.Text = reader.ReadToEnd();
-                }
-                this.statusStrip1.Text = this.fileName;
-            }
-
             fs = new FileStream(fileName, FileMode.Open);
             try
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 textFormat = (textProperties)formatter.Deserialize(fs);
+                textFormat.title = Path.GetFileName(fileName);
+                initialStateProperties = textFormat.toString();
                 applyFormat();
             }
             catch (SerializationException error)
@@ -92,7 +84,7 @@ namespace TextEditor
             this.textFormat.fontColor = this.textBox1.ForeColor;
             this.textFormat.formLocation = this.Location;
             this.textFormat.formSize = this.Size;
-            this.textFormat.title = this.fileName.Split('.')[0];
+            this.textFormat.title = Path.GetFileName(this.fileName);
             this.textFormat.text = this.textBox1.Text;
             this.textFormat.font = this.textBox1.Font.Name;
         }
@@ -136,6 +128,7 @@ namespace TextEditor
                     createFormat();
                     #pragma warning disable SYSLIB0011
                     formatter.Serialize(fs, textFormat);
+                    initialStateProperties = textFormat.toString();
                     this.toolStripStatusLabel1.Text = Path.GetFileName(saveFileDialog1.FileName);
 
                 }
@@ -199,6 +192,7 @@ namespace TextEditor
                     createFormat();
                     #pragma warning disable SYSLIB0011
                     formatter.Serialize(fs, textFormat);
+                    initialStateProperties = textFormat.toString();
                 }
                 catch (SerializationException error)
                 {
@@ -286,6 +280,22 @@ namespace TextEditor
         private void mainForm_Load(object sender, EventArgs e)
         {
             createFormat();
+        }
+
+        private void textEditor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            createFormat();
+            if (initialStateProperties != textFormat.toString())
+            {
+                var result = MessageBox.Show("Are you sure you want to leave?", "You have unsaved changes.",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+
+            }
         }
     }
 }
