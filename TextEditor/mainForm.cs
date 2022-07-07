@@ -14,21 +14,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace TextEditor
 {
-    public partial class mainForm : Form
+    public partial class textEditor : Form
     {
         string fileName;
         FileStream fs;
         textProperties textFormat = new textProperties();
 
-        public mainForm()
+        public textEditor()
         {
             InitializeComponent();
         }
-        public static mainForm CreateTopLevelWindow(string fileName)
+        public static textEditor CreateTopLevelWindow(string fileName)
         {
             if (!string.IsNullOrEmpty(fileName))
             {
-                foreach (mainForm openForm in Application.OpenForms)
+                foreach (textEditor openForm in Application.OpenForms)
                 {
                     if (string.Compare(openForm.FileName, fileName, true) == 0)
                     {
@@ -38,7 +38,7 @@ namespace TextEditor
                 }
             }
 
-            mainForm form = new mainForm();
+            textEditor form = new textEditor();
             form.fileName = "example";
 
             if (fileName != null)
@@ -117,7 +117,7 @@ namespace TextEditor
                 {
                     fs.Close();
                 }
-                mainForm.CreateTopLevelWindow(this.openFileDialog1.FileName);
+                textEditor.CreateTopLevelWindow(this.openFileDialog1.FileName);
             }
         }
 
@@ -175,7 +175,7 @@ namespace TextEditor
             {
                 fs.Close();
             }
-            mainForm.CreateTopLevelWindow(null);
+            textEditor.CreateTopLevelWindow(null);
 
         }
 

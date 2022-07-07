@@ -28,10 +28,10 @@ namespace TextEditor
              this.MainForm = this.CreateTopLevelWindow(this.CommandLineArgs);
         }
 
-        mainForm CreateTopLevelWindow(ReadOnlyCollection<string> args)
+        textEditor CreateTopLevelWindow(ReadOnlyCollection<string> args)
         {
             string fileName = (args.Count > 0 ? args[0] : null);
-            return mainForm.CreateTopLevelWindow(fileName);
+            return textEditor.CreateTopLevelWindow(fileName);
         }
 
     }

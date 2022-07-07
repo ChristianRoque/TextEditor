@@ -91,7 +91,6 @@ C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\ref\T
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3Controls.DialogForm.resources
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3.GroupInfo.resources
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3Main.HW3Controls.Pledge.resources
-\\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.mainForm.resources
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Oath.resources
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Preferences.resources
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Properties.Resources.resources
@@ -105,3 +104,4 @@ C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\ref\T
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.pdb
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.genruntimeconfig.cache
 \\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\ref\TextEditor.dll
+\\Mac\Home\Desktop\Summer\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.textEditor.resources
