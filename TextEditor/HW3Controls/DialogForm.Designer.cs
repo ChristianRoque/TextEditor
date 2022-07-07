@@ -39,10 +39,10 @@
             this.groupInfo1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupInfo1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupInfo1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupInfo1.Location = new System.Drawing.Point(0, 231);
+            this.groupInfo1.Location = new System.Drawing.Point(0, 511);
             this.groupInfo1.Margin = new System.Windows.Forms.Padding(4);
             this.groupInfo1.Name = "groupInfo1";
-            this.groupInfo1.Size = new System.Drawing.Size(476, 115);
+            this.groupInfo1.Size = new System.Drawing.Size(1304, 259);
             this.groupInfo1.TabIndex = 0;
             // 
             // courseInfo2
@@ -54,7 +54,7 @@
             this.courseInfo2.Location = new System.Drawing.Point(0, 0);
             this.courseInfo2.Margin = new System.Windows.Forms.Padding(5);
             this.courseInfo2.Name = "courseInfo2";
-            this.courseInfo2.Size = new System.Drawing.Size(476, 68);
+            this.courseInfo2.Size = new System.Drawing.Size(1304, 68);
             this.courseInfo2.TabIndex = 1;
             // 
             // panel1
@@ -63,13 +63,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 163);
+            this.panel1.Size = new System.Drawing.Size(1304, 443);
             this.panel1.TabIndex = 2;
             // 
             // DialogForm
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(476, 346);
+            this.ClientSize = new System.Drawing.Size(1304, 770);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.courseInfo2);
             this.Controls.Add(this.groupInfo1);

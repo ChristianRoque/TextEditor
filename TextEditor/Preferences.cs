@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HW3Controls;
 
 namespace TextEditor
 {
-    public partial class Preferences : Form
+    public partial class Preferences : DialogForm
     {
         public Preferences()
         {

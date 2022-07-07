@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(1188, 355);
+            // 
+            // Preferences
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::TextEditor.Properties.Resources.back_wallpaper_2014_045241594;
+            this.ClientSize = new System.Drawing.Size(1188, 682);
+            this.Name = "Preferences";
             this.Text = "Preferences";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

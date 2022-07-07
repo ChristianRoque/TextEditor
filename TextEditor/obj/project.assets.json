@@ -940,11 +940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\TextEditor.csproj",
+      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj",
       "projectName": "TextEditor",
-      "projectPath": "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\TextEditor.csproj",
+      "projectPath": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj",
       "packagesPath": "C:\\Users\\christianroque\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\obj\\",
+      "outputPath": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\christianroque\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -999,28 +999,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.IO 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "System.IO"
-    },
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Threading.Tasks 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "System.Threading.Tasks"
-    },
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Runtime 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "System.Runtime"
-    }
-  ]
+  }
 }

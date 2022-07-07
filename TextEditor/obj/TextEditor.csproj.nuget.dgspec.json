@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\TextEditor.csproj": {}
+    "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\TextEditor.csproj": {
+    "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\TextEditor.csproj",
+        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj",
         "projectName": "TextEditor",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\TextEditor.csproj",
+        "projectPath": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj",
         "packagesPath": "C:\\Users\\christianroque\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\TextEditor\\TextEditor\\obj\\",
+        "outputPath": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\christianroque\\AppData\\Roaming\\NuGet\\NuGet.Config",
