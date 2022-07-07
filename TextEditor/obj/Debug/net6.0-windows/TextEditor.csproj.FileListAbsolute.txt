@@ -51,3 +51,30 @@
 \\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.genruntimeconfig.cache
 \\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\ref\TextEditor.dll
 \\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Properties.Resources.resources
+C:\Users\jafer\Source\Repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.dll
+C:\Users\jafer\Source\Repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\refint\TextEditor.dll
+C:\Users\jafer\Source\Repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.pdb
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.csproj.AssemblyReference.cache
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.csproj.ResolveComReference.cache
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.About.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3Controls.BaseForm.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3.CourseInfo.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3Controls.DialogForm.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3.GroupInfo.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\HW3Main.HW3Controls.Pledge.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.mainForm.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Oath.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Preferences.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Properties.Resources.resources
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.csproj.GenerateResource.cache
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.AssemblyInfoInputs.cache
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.AssemblyInfo.cs
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.csproj.CoreCompileInputs.cache
+C:\Users\jafer\source\repos\TextEditor\TextEditor\bin\Debug\net6.0-windows\TextEditor.exe
+C:\Users\jafer\source\repos\TextEditor\TextEditor\bin\Debug\net6.0-windows\TextEditor.deps.json
+C:\Users\jafer\source\repos\TextEditor\TextEditor\bin\Debug\net6.0-windows\TextEditor.runtimeconfig.json
+C:\Users\jafer\source\repos\TextEditor\TextEditor\bin\Debug\net6.0-windows\TextEditor.dll
+C:\Users\jafer\source\repos\TextEditor\TextEditor\bin\Debug\net6.0-windows\TextEditor.pdb
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.genruntimeconfig.cache
+C:\Users\jafer\source\repos\TextEditor\TextEditor\obj\Debug\net6.0-windows\ref\TextEditor.dll

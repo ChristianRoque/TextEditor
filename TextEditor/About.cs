@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TextEditor
 {
-    public partial class About : Form
+    public partial class About : HW3Controls.DialogForm
     {
         public About()
         {

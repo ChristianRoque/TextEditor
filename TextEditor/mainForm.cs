@@ -230,5 +230,41 @@ namespace TextEditor
         {
             Preferences myPrefDialog = (Preferences)sender;
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isFormOpen = false;
+            foreach (Form form in Application.OpenForms)
+                if (form is About)
+                    isFormOpen = true;
+            if (!isFormOpen)
+            {
+                About dialog = new About();
+                int x_cooridnate = this.Location.X + this.Size.Width;
+                int y_coordinate = this.Location.Y;
+                dialog.Location = new Point(x_cooridnate, y_coordinate);
+                dialog.Show();
+            }
+            else
+                MessageBox.Show("1 too many dialogs open, friend");
+        }
+
+        private void oathToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isFormOpen = false;
+            foreach (Form form in Application.OpenForms)
+                if (form is Oath)
+                    isFormOpen = true;
+            if (!isFormOpen)
+            {
+                Oath dialog = new Oath();
+                int x_cooridnate = this.Location.X + this.Size.Width;
+                int y_coordinate = this.Location.Y;
+                dialog.Location = new Point(x_cooridnate, y_coordinate);
+                dialog.Show();
+            }
+            else
+                MessageBox.Show("1 too many dialogs open, friend");
+        }
     }
 }

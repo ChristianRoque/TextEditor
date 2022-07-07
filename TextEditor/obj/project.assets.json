@@ -935,19 +935,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\christianroque\\.nuget\\packages\\": {}
+    "C:\\Users\\jafer\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj",
+      "projectUniqueName": "C:\\Users\\jafer\\source\\repos\\TextEditor\\TextEditor\\TextEditor.csproj",
       "projectName": "TextEditor",
-      "projectPath": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\TextEditor.csproj",
-      "packagesPath": "C:\\Users\\christianroque\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Desktop\\Summer\\Advanced windows\\TextEditor\\TextEditor\\obj\\",
+      "projectPath": "C:\\Users\\jafer\\source\\repos\\TextEditor\\TextEditor\\TextEditor.csproj",
+      "packagesPath": "C:\\Users\\jafer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jafer\\source\\repos\\TextEditor\\TextEditor\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\christianroque\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace TextEditor
 {
-    public partial class Oath : Form
+    public partial class Oath : HW3Controls.DialogForm
     {
         public Oath()
         {
             InitializeComponent();
         }
+
     }
 }
