@@ -39,6 +39,7 @@ namespace TextEditor
             }
 
             mainForm form = new mainForm();
+            form.fileName = "example";
 
             if (fileName != null)
             {
@@ -72,12 +73,7 @@ namespace TextEditor
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 textFormat = (textProperties)formatter.Deserialize(fs);
-                //this.textBox1.Font = textFormat.font;
-                this.textBox1.Text = textFormat.text;
-                this.Location = textFormat.formLocation;
-                this.Size = textFormat.formSize;
-                this.textBox1.ForeColor = textFormat.fontColor;
-                this.textBox1.BackColor = textFormat.backColor;
+                applyFormat();
             }
             catch (SerializationException error)
             {
@@ -88,6 +84,28 @@ namespace TextEditor
         string FileName
         {
             get { return this.fileName; }
+        }
+
+        public void createFormat()
+        {
+            this.textFormat.backColor = this.textBox1.BackColor;
+            this.textFormat.fontColor = this.textBox1.ForeColor;
+            this.textFormat.formLocation = this.Location;
+            this.textFormat.formSize = this.Size;
+            this.textFormat.title = this.fileName.Split('.')[0];
+            this.textFormat.text = this.textBox1.Text;
+            this.textFormat.font = this.textBox1.Font.Name;
+        }
+
+        public void applyFormat()
+        {
+            this.textBox1.BackColor = this.textFormat.backColor;
+            this.textBox1.ForeColor = this.textFormat.fontColor;
+            this.Location = this.textFormat.formLocation;
+            this.Size = this.textFormat.formSize;
+            this.fileName.Split('.')[0] = this.textFormat.title;
+            this.textBox1.Text = this.textFormat.text;
+            this.textBox1.Font = new Font(this.textFormat.font,this.textBox1.Font.Size);
         }
 
         private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -115,12 +133,7 @@ namespace TextEditor
                 BinaryFormatter formatter = new BinaryFormatter();
                 try
                 {
-                    textFormat.font = this.textBox1.Font.ToString();
-                    textFormat.text = this.textBox1.Text;
-                    textFormat.formLocation = this.Location;
-                    textFormat.formSize = this.Size;
-                    textFormat.fontColor = this.textBox1.ForeColor;
-                    textFormat.backColor = this.textBox1.BackColor;
+                    createFormat();
                     #pragma warning disable SYSLIB0011
                     formatter.Serialize(fs, textFormat);
                     this.toolStripStatusLabel1.Text = Path.GetFileName(saveFileDialog1.FileName);
@@ -183,12 +196,7 @@ namespace TextEditor
                 {
                     fs.Close();
                     fs = new FileStream(this.fileName, FileMode.Create);
-                    textFormat.font = this.textBox1.Font.ToString();
-                    textFormat.text = this.textBox1.Text;
-                    textFormat.formLocation = this.Location;
-                    textFormat.formSize = this.Size;
-                    textFormat.fontColor = this.textBox1.ForeColor;
-                    textFormat.backColor = this.textBox1.BackColor;
+                    createFormat();
                     #pragma warning disable SYSLIB0011
                     formatter.Serialize(fs, textFormat);
                 }
@@ -210,25 +218,33 @@ namespace TextEditor
 
         private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Preferences myPrefDialog = new Preferences();
+            Preferences myPrefDialog = new Preferences(textFormat);
             myPrefDialog.Apply += applyChanges;
             // Event handler to update mainform values modelessly
             DialogResult result = myPrefDialog.ShowDialog();
             // Update all values if dialog was updated using the OK button
             if (result == DialogResult.OK)
             {
-                textFormat.font = this.textBox1.Font.ToString();
-                textFormat.text = this.textBox1.Text;
-                textFormat.formLocation = this.Location;
-                textFormat.formSize = this.Size;
-                textFormat.fontColor = this.textBox1.ForeColor;
-                textFormat.backColor = this.textBox1.BackColor;
+                textFormat.font = myPrefDialog.properties.font;
+                textFormat.formLocation = myPrefDialog.properties.formLocation;
+                textFormat.formSize = myPrefDialog.properties.formSize;
+                textFormat.fontColor = myPrefDialog.properties.fontColor;
+                textFormat.backColor = myPrefDialog.properties.backColor;
+                textFormat.title = myPrefDialog.properties.title;
+                applyFormat();
             }
         }
 
         private void applyChanges(object sender, EventArgs e)
         {
             Preferences myPrefDialog = (Preferences)sender;
+            textFormat.font = myPrefDialog.properties.font;
+            textFormat.formLocation = myPrefDialog.properties.formLocation;
+            textFormat.formSize = myPrefDialog.properties.formSize;
+            textFormat.fontColor = myPrefDialog.properties.fontColor;
+            textFormat.backColor = myPrefDialog.properties.backColor;
+            textFormat.title = myPrefDialog.properties.title;
+            applyFormat();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,6 +281,11 @@ namespace TextEditor
             }
             else
                 MessageBox.Show("1 too many dialogs open, friend");
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            createFormat();
         }
     }
 }
