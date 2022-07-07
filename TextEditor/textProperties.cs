@@ -13,6 +13,7 @@ interface ITextProperties
     Point formLocation { get; set; }
     string text { get; set; }
     string font { get; set; }
+    string title { get; set; }
 }
 
 namespace TextEditor
@@ -20,6 +21,7 @@ namespace TextEditor
     [Serializable]
     public class textProperties : ITextProperties
     {
+        public string title { get; set; }
         public Color fontColor { get; set; }
         public Color backColor { get; set; }
         public Size formSize { get; set; }
