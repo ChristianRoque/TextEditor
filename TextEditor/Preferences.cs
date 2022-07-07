@@ -25,8 +25,8 @@ namespace TextEditor
         {
             InitializeComponent();
             this.properties = properties;
-            this.textBox2.Text = properties.font;
-            this.textBox1.Text = properties.title;
+            this.fontStyle.Text = properties.font;
+            this.fileTitle.Text = properties.title;
       
         }
 
@@ -62,8 +62,8 @@ namespace TextEditor
 
         private void apply_Click(object sender, EventArgs e)
         {
-            this.properties.font = this.textBox2.Text;
-            this.properties.title = this.textBox1.Text;
+            this.properties.font = this.fontStyle.Text;
+            this.properties.title = this.fileTitle.Text;
             if (Apply != null) Apply(this, EventArgs.Empty);
         }
 
@@ -74,7 +74,62 @@ namespace TextEditor
 
         private void ok_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void Backcolor_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Click to open a dialog to pick the background color for the editor.");
+        }
+
+        private void fontColor_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Click to open a dialog to pick the font color for the editor.");
+        }
+
+        private void saveSize_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Click to save the size of the file editor.(mirrors the size of preferences)");
+        }
+
+        private void saveLocation_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Click to save the location of the file editor.(mirrors the size of preferences)");
+        }
+
+        private void fontStyle_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Input for the desired font style.");
+        }
+
+        private void fileTitle_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Input for the desired title.");
+        }
+
+        private void apply_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Click to apply the desired changes to editor without exiting the preferences window.");
+        }
+
+        private void cancel_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Close the preferences window.");
+        }
+
+        private void ok_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            hlpevent.Handled = true;
+            MessageBox.Show("Save your preferences and close the preferences window.");
         }
     }
 }

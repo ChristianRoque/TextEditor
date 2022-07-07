@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.apply = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
+            this.ok = new System.Windows.Forms.Button();
+            this.fileTitle = new System.Windows.Forms.TextBox();
+            this.fontStyle = new System.Windows.Forms.TextBox();
+            this.saveLocation = new System.Windows.Forms.Button();
+            this.saveSize = new System.Windows.Forms.Button();
+            this.fontColor = new System.Windows.Forms.Button();
             this.Backcolor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,92 +47,100 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Backcolor);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.fontColor);
+            this.panel1.Controls.Add(this.saveSize);
+            this.panel1.Controls.Add(this.saveLocation);
+            this.panel1.Controls.Add(this.fontStyle);
+            this.panel1.Controls.Add(this.fileTitle);
+            this.panel1.Controls.Add(this.ok);
+            this.panel1.Controls.Add(this.cancel);
+            this.panel1.Controls.Add(this.apply);
             this.panel1.Size = new System.Drawing.Size(1080, 411);
             // 
-            // button1
+            // apply
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(521, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Apply";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.apply_Click);
+            this.apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.apply.Location = new System.Drawing.Point(521, 332);
+            this.apply.Name = "apply";
+            this.apply.Size = new System.Drawing.Size(150, 46);
+            this.apply.TabIndex = 0;
+            this.apply.Text = "Apply";
+            this.apply.UseVisualStyleBackColor = true;
+            this.apply.Click += new System.EventHandler(this.apply_Click);
+            this.apply.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.apply_HelpRequested);
             // 
-            // button2
+            // cancel
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(711, 332);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.cancel_Click);
+            this.cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancel.Location = new System.Drawing.Point(711, 332);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(150, 46);
+            this.cancel.TabIndex = 1;
+            this.cancel.Text = "Cancel";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            this.cancel.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.cancel_HelpRequested);
             // 
-            // button3
+            // ok
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(906, 332);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Ok";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.ok_Click);
+            this.ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ok.Location = new System.Drawing.Point(906, 332);
+            this.ok.Name = "ok";
+            this.ok.Size = new System.Drawing.Size(150, 46);
+            this.ok.TabIndex = 2;
+            this.ok.Text = "Ok";
+            this.ok.UseVisualStyleBackColor = true;
+            this.ok.Click += new System.EventHandler(this.ok_Click);
+            this.ok.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ok_HelpRequested);
             // 
-            // textBox1
+            // fileTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(858, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 39);
-            this.textBox1.TabIndex = 3;
+            this.fileTitle.Location = new System.Drawing.Point(858, 43);
+            this.fileTitle.Name = "fileTitle";
+            this.fileTitle.Size = new System.Drawing.Size(200, 39);
+            this.fileTitle.TabIndex = 3;
+            this.fileTitle.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.fileTitle_HelpRequested);
             // 
-            // textBox2
+            // fontStyle
             // 
-            this.textBox2.Location = new System.Drawing.Point(595, 43);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 39);
-            this.textBox2.TabIndex = 4;
+            this.fontStyle.Location = new System.Drawing.Point(595, 43);
+            this.fontStyle.Name = "fontStyle";
+            this.fontStyle.Size = new System.Drawing.Size(204, 39);
+            this.fontStyle.TabIndex = 4;
+            this.fontStyle.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.fontStyle_HelpRequested);
             // 
-            // button4
+            // saveLocation
             // 
-            this.button4.Location = new System.Drawing.Point(333, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Save Location";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.saveLocation_Click);
+            this.saveLocation.Location = new System.Drawing.Point(333, 150);
+            this.saveLocation.Name = "saveLocation";
+            this.saveLocation.Size = new System.Drawing.Size(200, 46);
+            this.saveLocation.TabIndex = 3;
+            this.saveLocation.Text = "Save Location";
+            this.saveLocation.UseVisualStyleBackColor = true;
+            this.saveLocation.Click += new System.EventHandler(this.saveLocation_Click);
+            this.saveLocation.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.saveLocation_HelpRequested);
             // 
-            // button5
+            // saveSize
             // 
-            this.button5.Location = new System.Drawing.Point(59, 150);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 46);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Save Size";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.saveSize_Click);
+            this.saveSize.Location = new System.Drawing.Point(59, 150);
+            this.saveSize.Name = "saveSize";
+            this.saveSize.Size = new System.Drawing.Size(200, 46);
+            this.saveSize.TabIndex = 5;
+            this.saveSize.Text = "Save Size";
+            this.saveSize.UseVisualStyleBackColor = true;
+            this.saveSize.Click += new System.EventHandler(this.saveSize_Click);
+            this.saveSize.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.saveSize_HelpRequested);
             // 
-            // button6
+            // fontColor
             // 
-            this.button6.Location = new System.Drawing.Point(333, 43);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 46);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Font Color";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.fontColor_Click);
+            this.fontColor.Location = new System.Drawing.Point(333, 43);
+            this.fontColor.Name = "fontColor";
+            this.fontColor.Size = new System.Drawing.Size(200, 46);
+            this.fontColor.TabIndex = 6;
+            this.fontColor.Text = "Font Color";
+            this.fontColor.UseVisualStyleBackColor = true;
+            this.fontColor.Click += new System.EventHandler(this.fontColor_Click);
+            this.fontColor.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.fontColor_HelpRequested);
             // 
             // Backcolor
             // 
@@ -144,6 +152,7 @@
             this.Backcolor.Text = "Back Color";
             this.Backcolor.UseVisualStyleBackColor = true;
             this.Backcolor.Click += new System.EventHandler(this.Backcolor_Click_1);
+            this.Backcolor.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.Backcolor_HelpRequested);
             // 
             // label1
             // 
@@ -184,16 +193,16 @@
 
         #endregion
 
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private TextBox fontStyle;
+        private TextBox fileTitle;
+        private Button ok;
+        private Button cancel;
+        private Button apply;
         private Label label2;
         private Label label1;
         private Button Backcolor;
-        private Button button6;
-        private Button button5;
-        private Button button4;
+        private Button fontColor;
+        private Button saveSize;
+        private Button saveLocation;
     }
 }
