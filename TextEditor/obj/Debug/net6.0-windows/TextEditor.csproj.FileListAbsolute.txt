@@ -50,3 +50,4 @@
 \\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.pdb
 \\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.genruntimeconfig.cache
 \\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\ref\TextEditor.dll
+\\Mac\Home\Desktop\Summer\Advanced windows\TextEditor\TextEditor\obj\Debug\net6.0-windows\TextEditor.Properties.Resources.resources

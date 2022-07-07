@@ -152,10 +152,7 @@ namespace TextEditor
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.textBox1.SelectionLength > 0)
-            {
                 textBox1.Paste();
-            }
         }
 
         private void openNewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -209,6 +206,29 @@ namespace TextEditor
             {
                 fs.Close();
             }
+        }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Preferences myPrefDialog = new Preferences();
+            myPrefDialog.Apply += applyChanges;
+            // Event handler to update mainform values modelessly
+            DialogResult result = myPrefDialog.ShowDialog();
+            // Update all values if dialog was updated using the OK button
+            if (result == DialogResult.OK)
+            {
+                textFormat.font = this.textBox1.Font.ToString();
+                textFormat.text = this.textBox1.Text;
+                textFormat.formLocation = this.Location;
+                textFormat.formSize = this.Size;
+                textFormat.fontColor = this.textBox1.ForeColor;
+                textFormat.backColor = this.textBox1.BackColor;
+            }
+        }
+
+        private void applyChanges(object sender, EventArgs e)
+        {
+            Preferences myPrefDialog = (Preferences)sender;
         }
     }
 }
