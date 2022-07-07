@@ -39,11 +39,15 @@
             this.Backcolor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Backcolor);
@@ -95,7 +99,7 @@
             // 
             // fileTitle
             // 
-            this.fileTitle.Location = new System.Drawing.Point(858, 43);
+            this.fileTitle.Location = new System.Drawing.Point(856, 50);
             this.fileTitle.Name = "fileTitle";
             this.fileTitle.Size = new System.Drawing.Size(200, 39);
             this.fileTitle.TabIndex = 3;
@@ -103,7 +107,7 @@
             // 
             // fontStyle
             // 
-            this.fontStyle.Location = new System.Drawing.Point(595, 43);
+            this.fontStyle.Location = new System.Drawing.Point(595, 50);
             this.fontStyle.Name = "fontStyle";
             this.fontStyle.Size = new System.Drawing.Size(204, 39);
             this.fontStyle.TabIndex = 4;
@@ -174,6 +178,24 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Title";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(265, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 32);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "   ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(539, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 32);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "   ";
+            // 
             // Preferences
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -204,5 +226,7 @@
         private Button fontColor;
         private Button saveSize;
         private Button saveLocation;
+        private Label label4;
+        private Label label3;
     }
 }

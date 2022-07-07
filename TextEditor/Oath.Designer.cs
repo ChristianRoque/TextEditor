@@ -28,48 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pledge1 = new HW3Main.HW3Controls.Pledge();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pledge1);
+            this.panel1.Size = new System.Drawing.Size(936, 129);
             // 
-            // label1
+            // pledge1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "I understand that this is a group project.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(562, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "It is in my best interest to participate in writing the homework and study all th" +
-    "e code from the homework.";
+            this.pledge1.BackColor = System.Drawing.Color.Transparent;
+            this.pledge1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pledge1.Location = new System.Drawing.Point(0, 0);
+            this.pledge1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pledge1.Name = "pledge1";
+            this.pledge1.Size = new System.Drawing.Size(936, 129);
+            this.pledge1.TabIndex = 0;
             // 
             // Oath
             // 
-            this.ClientSize = new System.Drawing.Size(1304, 770);
+            this.BackgroundImage = global::TextEditor.Properties.Resources.back_wallpaper_2014_045241594;
+            this.ClientSize = new System.Drawing.Size(936, 456);
             this.Name = "Oath";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        private HW3Main.HW3Controls.Pledge pledge1;
     }
 }

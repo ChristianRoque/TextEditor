@@ -27,8 +27,30 @@ namespace TextEditor
             this.properties = properties;
             this.fontStyle.Text = properties.font;
             this.fileTitle.Text = properties.title;
+            this.label3.BackColor = properties.backColor;
+            this.label4.BackColor = properties.fontColor;
       
         }
+
+        private bool contrast(Color firstColor, Color secondColor)
+        {
+            double ratio;
+            double firstColorLum = (0.2126 * firstColor.R + 0.7152 * firstColor.G + 0.0722 * firstColor.G);
+            double secondColorLum = (0.2126 * secondColor.R + 0.7152 * secondColor.G + 0.0722 * secondColor.G);
+            if (firstColorLum > secondColorLum)
+            {
+                ratio = (firstColorLum + 0.05) / (secondColorLum + 0.05);
+            } else
+            {
+                ratio = (secondColorLum + 0.05) / (firstColorLum + 0.05);
+            }
+            if (ratio >= 4.0)
+            {
+                return true;
+            }
+            return false;
+        }
+        
 
         private void fontColor_Click(object sender, EventArgs e)
         {
@@ -36,7 +58,15 @@ namespace TextEditor
             colorDialog.Color = properties.fontColor;
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
-                properties.fontColor= colorDialog.Color;
+                if (contrast(colorDialog.Color, properties.backColor))
+                {
+                    this.label4.BackColor = colorDialog.Color;
+                    properties.fontColor = colorDialog.Color;
+                } else
+                {
+                    MessageBox.Show("Contrast between colors not high enough.");
+                }
+                
             }
         }
 
@@ -46,7 +76,15 @@ namespace TextEditor
             colorDialog.Color = properties.backColor;
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
-                properties.backColor = colorDialog.Color;
+                if (contrast(colorDialog.Color, properties.fontColor))
+                {
+                    this.label3.BackColor = colorDialog.Color;
+                    properties.backColor = colorDialog.Color;
+                } else
+                {
+                    MessageBox.Show("Contrast between colors not high enough.");
+                }
+                    
             }
         }
 
@@ -62,8 +100,21 @@ namespace TextEditor
 
         private void apply_Click(object sender, EventArgs e)
         {
-            this.properties.font = this.fontStyle.Text;
-            this.properties.title = this.fileTitle.Text;
+            if (this.properties.font == new Font(this.fontStyle.Text,20).Name)
+            {
+                this.properties.font = this.fontStyle.Text;
+            } else
+            {
+                MessageBox.Show("Font does not exist. Please try again.");
+            }
+            if (this.fileTitle.Text.Length != 0)
+            {
+                this.properties.title = this.fileTitle.Text;
+            } else
+            {
+                MessageBox.Show("Empty value for title.");
+            }
+            
             if (Apply != null) Apply(this, EventArgs.Empty);
         }
 
